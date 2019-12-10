@@ -1,0 +1,66 @@
+---
+title: "Codebook "
+author: "Keyrellous Adib"
+date: "10th of December 2019"
+output:"FinalTidyData.txt"
+  html_document:
+    keep_md: yes
+---
+
+## Project Description
+The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data. 
+
+The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain. See 'features_info.txt' for more details. 
+
+##Data processing
+
+###Merging  training and  test datasets to create a sigle data set
+First I read all the tables and merged them into training table (TrainMerge)and test table(TestMerge) 
+Then, I mereged the two tables into a single dataset (AllData)
+
+##Subsetting the merged data 
+The merged data was later subsetted to include coulums activity, subject, mean and standard deviation  
+
+###Using descriptive activity names to name the activities in the data set
+###Variables names 
+SubjectId"
+"ActivityType" 
+"ActivityId" 
+"timeDomainBodyAccelerometer-Mean()-X"
+"timeDomainBodyAccelerometer-Mean()-Y"
+"timeDomainBodyAccelerometer-Mean()-Z" 
+"timeDomainBodyAccelerometer-StandardDeviation()-X" "timeDomainBodyAccelerometer-StandardDeviation()-Y" "timeDomainBodyAccelerometer-StandardDeviation()-Z" 
+"timeDomainGravityAccelerometer-Mean()-X" 
+"timeDomainGravityAccelerometer-Mean()-Y" 
+"timeDomainGravityAccelerometer-Mean()-Z"
+"timeDomainGravityAccelerometer-StandardDeviation()-X" "timeDomainGravityAccelerometer-StandardDeviation()-Y" "timeDomainGravityAccelerometer-StandardDeviation()-Z" 
+"timeDomainBodyAccelerometerJerk-Mean()-X"
+"timeDomainBodyAccelerometerJerk-Mean()-Y" 
+"timeDomainBodyAccelerometerJerk-Mean()-Z" 
+"timeDomainBodyAccelerometerJerk-StandardDeviation()-X" "timeDomainBodyAccelerometerJerk-StandardDeviation()-Y" "timeDomainBodyAccelerometerJerk-StandardDeviation()-Z" 
+"timeDomainBodyGyroscope-Mean()-X" 
+"timeDomainBodyGyroscope-Mean()-Y"
+"timeDomainBodyGyroscope-Mean()-Z"
+"timeDomainBodyGyroscope-StandardDeviation()-X"
+"timeDomainBodyGyroscope-StandardDeviation()-Y"
+"timeDomainBodyGyroscope-StandardDeviation()-Z"
+"timeDomainBodyGyroscopeJerk-Mean()-X"
+"timeDomainBodyGyroscopeJerk-Mean()-Y"
+"timeDomainBodyGyroscopeJerk-Mean()-Z" 
+"timeDomainBodyGyroscopeJerk-StandardDeviation()-X" "timeDomainBodyGyroscopeJerk-StandardDeviation()-Y" "timeDomainBodyGyroscopeJerk-StandardDeviation()-Z" 
+"timeDomainBodyAccelerometerMagnitude-Mean()" "timeDomainBodyAccelerometerMagnitude-StandardDeviation()" "timeDomainGravityAccelerometerMagnitude-Mean()" "timeDomainGravityAccelerometerMagnitude-StandardDeviation()" "timeDomainBodyAccelerometerJerkMagnitude-Mean()" "timeDomainBodyAccelerometerJerkMagnitude-StandardDeviation()" "timeDomainBodyGyroscopeMagnitude-Mean()" 
+"timeDomainBodyGyroscopeMagnitude-StandardDeviation()" "timeDomainBodyGyroscopeJerkMagnitude-Mean()" "timeDomainBodyGyroscopeJerkMagnitude-StandardDeviation()" "frequencyDomainBodyAccelerometer-Mean()-X" 
+"frequencyDomainBodyAccelerometer-Mean()-Y" 
+"frequencyDomainBodyAccelerometer-Mean()-Z" "frequencyDomainBodyAccelerometer-StandardDeviation()-X" "frequencyDomainBodyAccelerometer-StandardDeviation()-Y" "frequencyDomainBodyAccelerometer-StandardDeviation()-Z" "frequencyDomainBodyAccelerometer-MeanFrequency()-X" "frequencyDomainBodyAccelerometer-MeanFrequency()-Y" "frequencyDomainBodyAccelerometer-MeanFrequency()-Z" "frequencyDomainBodyAccelerometerJerk-Mean()-X" 
+"frequencyDomainBodyAccelerometerJerk-Mean()-Y"
+"frequencyDomainBodyAccelerometerJerk-Mean()-Z" "frequencyDomainBodyAccelerometerJerk-StandardDeviation()-X" "frequencyDomainBodyAccelerometerJerk-StandardDeviation()-Y" "frequencyDomainBodyAccelerometerJerk-StandardDeviation()-Z" "frequencyDomainBodyAccelerometerJerk-MeanFrequency()-X" "frequencyDomainBodyAccelerometerJerk-MeanFrequency()-Y" "frequencyDomainBodyAccelerometerJerk-MeanFrequency()-Z" 
+"frequencyDomainBodyGyroscope-Mean()-X" 
+"frequencyDomainBodyGyroscope-Mean()-Y" 
+"frequencyDomainBodyGyroscope-Mean()-Z" 
+"frequencyDomainBodyGyroscope-StandardDeviation()-X" "frequencyDomainBodyGyroscope-StandardDeviation()-Y" "frequencyDomainBodyGyroscope-StandardDeviation()-Z" "frequencyDomainBodyGyroscope-MeanFrequency()-X"
+"frequencyDomainBodyGyroscope-MeanFrequency()-Y"
+"frequencyDomainBodyGyroscope-MeanFrequency()-Z" "frequencyDomainBodyAccelerometerMagnitude-Mean()" "frequencyDomainBodyAccelerometerMagnitude-StandardDeviation()" "frequencyDomainBodyAccelerometerMagnitude-MeanFrequency()" "frequencyDomainBodyBodyAccelerometerJerkMagnitude-Mean()" "frequencyDomainBodyBodyAccelerometerJerkMagnitude-StandardDeviation()" "frequencyDomainBodyBodyAccelerometerJerkMagnitude-MeanFrequency()" "frequencyDomainBodyBodyGyroscopeMagnitude-Mean()" "frequencyDomainBodyBodyGyroscopeMagnitude-StandardDeviation()" "frequencyDomainBodyBodyGyroscopeMagnitude-MeanFrequency()" "frequencyDomainBodyBodyGyroscopeJerkMagnitude-Mean()" "frequencyDomainBodyBodyGyroscopeJerkMagnitude-StandardDeviation()" "frequencyDomainBodyBodyGyroscopeJerkMagnitude-MeanFrequency()"
+
+
+
+##The final results are exported to FinalTidyData.txt file
